@@ -165,7 +165,7 @@ nav {
   }
 
   .user {
-    display: none;
+    display: flex;
   }
 
 }
