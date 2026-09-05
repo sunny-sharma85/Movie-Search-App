@@ -166,6 +166,7 @@ nav {
 
   .user {
     display: flex;
+
   }
 
 }
@@ -184,7 +185,12 @@ nav {
     gap: 0.4rem;
   }
   .dark-mode{
-    display: none;
+    
+
+    display: flex;
+
+
+
   }
 
 
