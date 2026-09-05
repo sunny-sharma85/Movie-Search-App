@@ -1,0 +1,56 @@
+.home-image{
+   min-height: 50vh;
+    background:linear-gradient(rgba(9,13,20,0.75),
+    rgba(9,13,20,0.9)), url("/movie.webp");
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.movies-section {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: clamp(3rem, 6vw, 5rem) 5%;
+
+  background: var(--bg);
+
+  color: var(--text);
+}
+
+.movies-heading {
+  width: 100%;
+  max-width: 75rem;
+
+  margin: 0 auto 2rem;
+}
+
+.movies-heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 0.4rem;
+}
+
+.movies-heading h2 span {
+  color: #f5c518;
+}
+
+.movies-heading p {
+  color: #9ca3af;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+}
+@media (max-width: 480px) {
+  .movies-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .movies-container {
+    grid-template-columns:
+      repeat(auto-fit, minmax(10rem, 1fr));
+
+    gap: 1rem;
+  }
+}
