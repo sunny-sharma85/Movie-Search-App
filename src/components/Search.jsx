@@ -6,7 +6,11 @@ const Search = ({setSearch }) => {
   const navigate = useNavigate()
 
   const handleSearch=()=>{
-      setSearch(input)
+    if(!input){
+      alert("Please enter a movie name")
+      return;
+    }
+    setSearch(input)
     const isRegsitered = localStorage.getItem("isRegistered")
     const isLoggedIn = localStorage.getItem("isLoggedIn")
     if(!isRegsitered){
