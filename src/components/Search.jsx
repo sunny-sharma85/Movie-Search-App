@@ -11,6 +11,7 @@ const Search = ({setSearch }) => {
       return;
     }
     setSearch(input)
+    setInput("")
     const isRegsitered = localStorage.getItem("isRegistered")
     const isLoggedIn = localStorage.getItem("isLoggedIn")
     if(!isRegsitered){
