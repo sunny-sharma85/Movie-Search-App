@@ -14,6 +14,9 @@ nav {
 
   z-index: 1000;
 }
+nav a{
+  text-decoration: none;
+}
 
 
 /* LOGO */

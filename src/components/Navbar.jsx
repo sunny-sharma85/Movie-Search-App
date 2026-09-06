@@ -23,7 +23,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     <nav>
-
+<Link to={"/"}>
       <div className="logo">
         <BiCameraMovie className="logo-icon" />
 
@@ -31,6 +31,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           Movie <span>Finder</span>
         </h2>
       </div>
+      </Link>
 
 
       <div className={isMenuOpen ? "links open" : "links"}>

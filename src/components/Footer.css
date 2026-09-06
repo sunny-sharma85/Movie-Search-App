@@ -9,6 +9,9 @@
   background: var(--card-bg);
   border-top: 1px solid var(--border);
 }
+footer a{
+  text-decoration: none;
+}
 
 /* Logo */
 

@@ -6,13 +6,14 @@ const Footer = () => {
   return (
     <>
       <footer>
+        <Link to={"/"}>
         <div className="logo">
           <BiCameraMovie className="logo-icon" />
           <h2>
             Movie <span> Finder</span>
           </h2>
         </div>
-
+</Link>
         <div className="reserved">
           <p>© 2026 Movie Finder. All rights reserved.</p>
         </div>
