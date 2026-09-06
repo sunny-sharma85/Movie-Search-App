@@ -19,13 +19,14 @@ useEffect(()=>{
       const data= await response.json()
       if(data.results.length===0){
         setError("No movies found for the search term.")
-        return
+        setMovies([])
       }
       else{
         setError("")
-              setMovies(data.results)
+       
+            
       }
-
+  setMovies(data.results)
       }catch(error){
         console.error("Error fetching movies:", error);
       }
@@ -38,8 +39,9 @@ useEffect(()=>{
 
 
   return (<>
+   {error && <p className="error" style={{color:"red",marginLeft:"25px"}}>{error}</p>}
   <div className="movies-container">
-    {error && <p className="error" style={{color:"red", marginBottom:"10px"}}>{error}</p>}
+   
     {movies.slice(0,12).map((movie)=>(
       <MovieCard key={movie.id} movie={movie}/>
     ))}
