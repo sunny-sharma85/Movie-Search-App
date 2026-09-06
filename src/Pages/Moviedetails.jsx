@@ -19,8 +19,13 @@ useEffect(()=>{
       const data= await response.json()
       if(data.results.length===0){
         setError("No movies found for the search term.")
+        return
       }
-      setMovies(data.results)
+      else{
+        setError("")
+              setMovies(data.results)
+      }
+
       }catch(error){
         console.error("Error fetching movies:", error);
       }
