@@ -52,6 +52,13 @@ const handleLogout = () => {
         >
           <span>Signup</span>
         </Link>
+         <Link
+          className="nav-links"
+          to="/login"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <span>Login</span>
+        </Link>
       </div>
 
       <div className="nav-right">
