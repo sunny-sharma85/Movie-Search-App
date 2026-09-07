@@ -14,7 +14,7 @@ const About = () => {
         </h1>
 
         <p>
-          Discover movies, explore details and find something
+          Discover movies, explore details and find somethings
           worth watching.
         </p>
       </section>
