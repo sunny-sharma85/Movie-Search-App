@@ -1,4 +1,4 @@
-import "./Adminlogin.css"
+import "./AdminLogin.css"
 import { useState } from "react";
 import{useNavigate} from "react-router-dom"
 import { BiCameraMovie } from "react-icons/bi";
@@ -18,7 +18,7 @@ const handleAdminLogin = (e) => {
     }
     if(email === adminUsername && password === adminPassword){
         localStorage.setItem("isadmin", true);
-        localStorage.setItem("username", email);
+        localStorage.setItem("adminemail", email);
         navigate("/admin");
     }else {
         setError("Invalid admin credentials");

@@ -21,7 +21,7 @@ const Signup = () => {
   }
     const handleSubmit = (e) => {
         e.preventDefault();
-       
+      
         if(!formData.username || !formData.email || !formData.password || !formData.confirmPassword){
           setError("Please fill in all fields");
           return;
@@ -34,8 +34,16 @@ const Signup = () => {
           setError("Passwords do not match");
           return;
         }
+         
         else{
           setError("")
+           const oldUsers= JSON.parse(localStorage.getItem("users")) || []
+        const newUser={
+          id:Date.now(),
+          ...formData
+        }
+        oldUsers.push(newUser)
+     localStorage.setItem("users",JSON.stringify(oldUsers))
           alert("Form submitted successfully");
           localStorage.setItem("isRegistered",true)
           localStorage.setItem("username",formData.username)
@@ -115,7 +123,7 @@ const Signup = () => {
 
         <p className="login-text">
           Already have an account?
-         <Link to={"/login"}> <span> Login</span> </Link>
+        <Link to={"/login"}> <span> Login</span> </Link>
         </p>
 
       </div>

@@ -17,9 +17,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 const handleLogout = () => {
   if (confirm("Are you sure you want to logout?")) {
     localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("formData");
-    localStorage.removeItem("username");
-          navigate("/signup");
+          navigate("/login");
   }
 };
   return (

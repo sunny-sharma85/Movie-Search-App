@@ -9,6 +9,8 @@ import {
 
 import "./Admin.css";
 const Admin = () => {
+ const isadmin= localStorage.getItem("isadmin")
+ const adminemail=localStorage.getItem("adminemail")
     
   const navigate = useNavigate();
 
@@ -47,15 +49,15 @@ const Admin = () => {
           <p>Manage Movie Finder users</p>
         </div>
 
-        <button
+    <button
           className="admin-logout"
           onClick={handleLogout}
-        >
+        > {isadmin&&<span>Hi{adminemail}</span>   }
           <FaSignOutAlt />
           Logout
         </button>
       </div>
-
+  
 
       <div className="admin-stats">
 

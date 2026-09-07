@@ -1,4 +1,4 @@
-import "./Admin.css";
+import "./About.css";
 import { BiCameraMovie } from "react-icons/bi";
 import { FaSearch, FaHeart, FaFilm } from "react-icons/fa";
 
