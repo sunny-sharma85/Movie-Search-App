@@ -8,6 +8,8 @@ import About from "./Pages/About"
 import Loader from "./components/Loader"
 import Signup from "./Pages/Signup"
 import Login from "./Pages/Login"
+import Adminlogin from "./components/Adminlogin"
+import Admin from "./Pages/Admin"
 function App() {
   const[darkMode,setDarkMode]=useState(
     localStorage.getItem("theme") !== "light"
@@ -43,6 +45,8 @@ function App() {
  <Route path='/about' element={<About/>}/>
  <Route path='/signup' element={<Signup/>}/>
  <Route path='/login' element={<Login/>}/>
+ <Route path='/admin-login' element={<Adminlogin/>}/>
+ <Route path="/admin" element={<Admin/>}/>
 
 
 

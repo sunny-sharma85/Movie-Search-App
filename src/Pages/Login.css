@@ -228,7 +228,27 @@ color: var(--text);
 .signup-text a{
     text-decoration: none;
 }
+.admin-login-link {
+  margin-top: 1rem;
+  text-align: center;
 
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.admin-login-link a {
+  margin-left: 0.3rem;
+
+  color: #f5c518;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.admin-login-link a:hover {
+  text-decoration: underline;
+}
 
 /* TABLET */
 

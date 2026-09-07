@@ -106,7 +106,10 @@ const navigate=useNavigate();
           Don't have an account?
           <Link to={"/signup"}><span> Sign Up</span> </Link>
         </p>
-
+<p className="admin-login-link">
+  Are you an admin?
+  <Link to="/admin-login"> Admin Login</Link>
+</p>
       </div>
 
     </main>

@@ -1,0 +1,169 @@
+.admin-page {
+  min-height: 100vh;
+  padding: 3rem 5%;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+.admin-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+}
+
+.admin-top h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.admin-top h1 svg {
+  color: #f5c518;
+}
+
+.admin-top p {
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+.admin-logout {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.7rem 1rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  background: #f5c518;
+  color: #090d14;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.5rem;
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+}
+
+.stat-card > svg {
+  font-size: 2rem;
+  color: #f5c518;
+}
+
+.stat-card h3 {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.stat-card h2 {
+  margin-top: 0.3rem;
+  font-size: 1.8rem;
+}
+
+
+.users-section {
+  padding: 1.5rem;
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+}
+
+.users-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+
+  text-align: left;
+
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: #f5c518;
+}
+
+td {
+  color: var(--text);
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+
+  color: #ff4d4d;
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+  .admin-top {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .admin-page {
+    padding: 2rem 1rem;
+  }
+
+  .admin-top {
+    flex-direction: column;
+  }
+
+  .admin-logout {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
