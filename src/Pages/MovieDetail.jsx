@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams , useNavigate} from "react-router-dom";
 import { FaStar, FaCalendarAlt, FaPlay } from "react-icons/fa";
+
 
 import "./MovieDetail.css";
 
 const MovieDetailsPage = () => {
+  const navigate=useNavigate()
 
   const { id } = useParams();
 
@@ -90,7 +92,7 @@ const MovieDetailsPage = () => {
   }
 
 
-  return (
+  return (<>
 
     <main className="movie-details-page">
 
@@ -98,7 +100,7 @@ const MovieDetailsPage = () => {
 
 
         {/* MOVIE INFO */}
-
+        
         <section className="movie-details-info">
 
           <div className="details-poster">
@@ -169,9 +171,10 @@ const MovieDetailsPage = () => {
             </div>
 
           </div>
-
+<div style={{color:"blue"}} className="link" onClick={()=>navigate("/")}>
+Back To Home
+</div>
         </section>
-
 
 
         {/* TRAILER */}
@@ -210,8 +213,9 @@ const MovieDetailsPage = () => {
 
     </main>
 
-  );
-
+  
+</>
+  )
 };
 
 export default MovieDetailsPage;

@@ -211,7 +211,13 @@
 
   font-size: 1.2rem;
 }
-
+.link{
+  cursor: pointer;
+  margin: 1.5rem 0;
+  background: transparent;
+  color: #f5c518;
+  font-size: 1rem;
+}
 
 
 /* TABLET */
