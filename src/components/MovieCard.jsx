@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 const MovieCard = ({ movie }) => {
   const navigate= useNavigate();
   return (
-    <div className="movie-card">
+    
+    <div className="movie-card"  onClick={() => navigate(`/movie/${movie.id}`)}>
 
       <div className="movie-poster">
         <img
@@ -38,7 +39,7 @@ const MovieCard = ({ movie }) => {
         <div className="movie-bottom">
           <span>{movie.vote_count} votes</span>
         <button
-  onClick={() => navigate(`/movie/${movie.id}`)}
+ 
 >
   View Details
 </button>
