@@ -1,0 +1,259 @@
+.movie-details-page {
+  min-height: 100vh;
+
+  padding: clamp(2rem, 5vw, 4rem) 5%;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+.details-container {
+  width: 100%;
+  max-width: 75rem;
+
+  margin: auto;
+}
+
+
+/* MOVIE INFORMATION */
+
+.movie-details-info {
+  display: flex;
+  align-items: flex-start;
+
+  gap: clamp(1.5rem, 4vw, 3rem);
+
+  padding: clamp(1rem, 3vw, 2rem);
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+
+/* POSTER */
+
+.details-poster {
+  width: 18rem;
+  flex-shrink: 0;
+}
+
+.details-poster img {
+  width: 100%;
+
+  display: block;
+
+  border-radius: 0.8rem;
+
+  object-fit: cover;
+}
+
+
+/* CONTENT */
+
+.details-content {
+  flex: 1;
+}
+
+.details-content h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+
+  margin-bottom: 1rem;
+
+  color: var(--text);
+}
+
+
+/* RATING / DATE / LANGUAGE */
+
+.details-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.details-meta span {
+  display: flex;
+  align-items: center;
+
+  gap: 0.4rem;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+}
+
+.details-meta svg {
+  color: #f5c518;
+}
+
+.details-meta .language {
+  padding: 0.3rem 0.6rem;
+
+  background: #f5c518;
+  color: #090d14;
+
+  border-radius: 0.3rem;
+
+  font-weight: 700;
+}
+
+
+/* OVERVIEW */
+
+.details-overview {
+  color: var(--muted);
+
+  line-height: 1.8;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 0.95rem;
+}
+
+
+/* EXTRA DETAILS */
+
+.details-extra {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.7rem;
+}
+
+.details-extra p {
+  color: var(--muted);
+}
+
+.details-extra strong {
+  color: var(--text);
+}
+
+
+/* TRAILER */
+
+.trailer-section {
+  margin-top: 3rem;
+}
+
+.trailer-section h2 {
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.trailer-section h2 svg,
+.trailer-section h2 span {
+  color: #f5c518;
+}
+
+
+.trailer-wrapper {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  border: 1px solid var(--border);
+
+  background: #000;
+}
+
+
+.trailer-wrapper iframe {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+
+.no-trailer {
+  padding: 2rem;
+
+  text-align: center;
+
+  background: var(--card-bg);
+
+  color: var(--muted);
+
+  border: 1px solid var(--border);
+
+  border-radius: 0.8rem;
+}
+
+
+/* LOADING / ERROR */
+
+.details-message {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg);
+  color: #f5c518;
+
+  font-size: 1.2rem;
+}
+
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+  .movie-details-info {
+    flex-direction: column;
+  }
+
+  .details-poster {
+    width: 100%;
+    max-width: 20rem;
+
+    margin: auto;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .movie-details-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .movie-details-info {
+    padding: 1rem;
+  }
+
+  .details-meta {
+    gap: 0.7rem;
+  }
+
+  .details-overview {
+    font-size: 0.85rem;
+  }
+
+  .trailer-section {
+    margin-top: 2rem;
+  }
+
+}

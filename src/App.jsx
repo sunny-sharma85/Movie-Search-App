@@ -10,6 +10,7 @@ import Signup from "./Pages/Signup"
 import Login from "./Pages/Login"
 import Adminlogin from "./components/Adminlogin"
 import Admin from "./Pages/Admin"
+import Moviedetails from "./Pages/MovieDetail"
 function App() {
   const[darkMode,setDarkMode]=useState(
     localStorage.getItem("theme") !== "light"
@@ -47,6 +48,10 @@ function App() {
  <Route path='/login' element={<Login/>}/>
  <Route path='/admin-login' element={<Adminlogin/>}/>
  <Route path="/admin" element={<Admin/>}/>
+ <Route
+  path="/movie/:id"
+  element={<Moviedetails/>}
+/>
 
 
 

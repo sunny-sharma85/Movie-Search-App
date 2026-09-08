@@ -1,7 +1,9 @@
 import "./MovieCard.css";
 import { FaStar, FaHeart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
+  const navigate= useNavigate();
   return (
     <div className="movie-card">
 
@@ -35,7 +37,11 @@ const MovieCard = ({ movie }) => {
 
         <div className="movie-bottom">
           <span>{movie.vote_count} votes</span>
-          <button>View Details</button>
+        <button
+  onClick={() => navigate(`/movie/${movie.id}`)}
+>
+  View Details
+</button>
         </div>
       </div>
 
